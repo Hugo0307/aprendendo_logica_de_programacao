@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+
+<script>
+
+
+
+	function pulaLinha() {
+		// função para pular uma ou mais linhas
+
+		document.write("<br>");
+	}
+
+	function mostra(frase) {
+		// função para exibição do conteúdo na tela
+
+		document.write("<big>" + frase + "</big>"); 
+	}
+	
+
+	mostra("VOU DESCOBRIR O ANO QUE VOCÊ NASCEU! DUVIDA?<br>");
+	pulaLinha();
+
+
+	setTimeout(function() {
+		//aqui vou criar um delay de 3000 milissegundos para exibir primeiro a mensagem anterior na tela e depois começar a gerar os popups.
+	
+	function descubraAno(anoAtual, idade) {
+		// função para receber parâmetros e retornar o ano de nascimento do usuário
+		
+		return anoNascimento = anoAtual-idade;//após a função receber os parâmetros, vai retornar o cálculo da variável anoNascimento. Nota: isso aqui é o que vai deixar o usuário feliz ao ver que funcionou kkkk
+	}
+	
+	var nome =prompt("Por favor, informe seu nome:"); //aqui exibi um popup interagindo com o usuário
+	
+	descubraAno(prompt("Qual o ano atual?"),
+	prompt("Qual idade você completa ou completou esse ano?"));//aqui exibo popup interagindo com o usuário e ao mesmo tempo passando os parâmetros (anoAtual, idade) para a função descubraAno
+	
+	var anoNascimento;//declarei a variável, sem isso não funciona.
+
+	mostra("VOU DESCOBRIR O ANO QUE VOCÊ NASCEU! DUVIDA?<br>");
+	pulaLinha();//aqui eu coloquei novamente a mensagem porque após os popups essa mensagem sumiu e ainda não descobri como fazê-la permanecer hehe quem puder me ajude aí... obrigado!
+	
+	mostra(nome + ", você nasceu em " + anoNascimento + "!");//E por fim, o resultado final! Obs.: comemorei ao chegar aqui e dar certo kkk. 
+
+},3000);
+
+	//Nota: estou aprendendo e aqui é de aprendizagem, então sei que logicamente em algo profissional, os comentários espontâneos da forma descontraída que fiz, não devem ser apresentados. Valeu!
+</script>
