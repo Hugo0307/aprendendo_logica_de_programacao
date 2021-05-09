@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<script>
+    
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write("<big>" + frase + "</big>");
+        pulaLinha();
+    }
+
+    
+    var idade = parseInt(prompt("Qual é sua idade?"));//converte string em inteiro
+
+    if (idade >= 18) {
+    //se maior que 18 executa as outras condições, se não cai no ultimo else e exibe mensagem definitiva
+    var temCarteira = prompt("Tem carteira? Responda S ou N.");
+
+        if (idade >= 18 && temCarteira == "S" || temCarteira == "s") {
+        //verifica se tem idade e carteira independentemente se digita maiúscula ou minúscula
+            mostra("Pode dirigir!"); 
+
+        } else {
+    			
+    	       mostra("Não pode dirigir!");
+
+    	       if (idade >= 18 && temCarteira == "N" || temCarteira == "n") {
+                //verifica se tem idade e não tem carteira independentemente se digita maiúscula ou minúscula
+    		      mostra("Motivo: Necessário possuir carteira!"); 
+    	       }
+
+    	   }
+    			
+    } else {
+    		mostra("Não pode dirigir!");
+    		mostra("Motivo: carteira só a partir de 18 anos!");
+        }
+
+</script>
