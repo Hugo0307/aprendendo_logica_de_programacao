@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+
+<h1>Que tal jogar um pouco de adivinhação?</h1>
+
+<h3>Qual número de 1 a 10 estou pensando?</h3>
+
+<input/> <!- área retangular onde o usuário vai inserir o dado->
+
+<button>Tentar</button> <!-botão que o usuário vai clicar para executar a ação no javascript->
+<br>
+<br>
+<script>
+
+    var input = document.querySelector("input");//criei a variável input para receber o que for digitado na tag input do HTML
+
+    function sorteia(n) {
+        // Aqui gera um número aleatório de zera a 10.
+        return n = Math.round(Math.random() * 10);
+       
+    }
+
+    function compara() {//criei essa função pra testar se o usuário acertou ou não.
+        
+        var numeroPensado = sorteia();//aqui atribuo à variável numeroPensado o número sorteado chamando a função sorteia.
+
+        if(input.value == numeroPensado) {//input.value é o valor atribuído ao input
+
+            alert("Uau! Você acertou, pois eu pensei no número " + numeroPensado);
+                
+        } if (input.value < numeroPensado) {
+
+                alert("Você errou! Eu pensei em outro, que é maior que " + input.value);
+
+            } if (input.value > numeroPensado) {
+
+                    alert("Você errou! Eu pensei em outro, que é menor que " + input.value);
+                }  
+    }  
+
+    var button = document.querySelector("button");//a variável button recebe o clicar do button no HTML
+    button.onclick = compara; // aqui atribuí à ação de clicar no botão "Tentar" o código passado na função compara.
+
+</script>
